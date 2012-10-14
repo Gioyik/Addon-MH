@@ -1,0 +1,21 @@
+-- Changelog --
+
+# Versión 0.1
+
++Funciones
+*Tabs con efecto de movimiento al hacer click
+*4 pestañas
+*Sin contenido en las pestañas
+*Efecto Roll-over en el icono de la barra de Addons
+*Imagen de Texto-Logo en la parte superior
+
++Errores
+*Error en cuanto a la variación de la posición del tamaño del Addon segun la ventana de Firefox
+
+# Versión 0.2
+
++Funciones
+
++Errores
+
++Corrección de errores
