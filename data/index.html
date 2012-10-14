@@ -1,30 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-		<meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Centro de Mozilla Hispano</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Animated Content Tabs with CSS3" />
-        <meta name="keywords" content="tabs, css3, transition, checked, pseudo-class, label, css-only, sibling combinator" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style2.css" />
-		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-		<!--[if lt IE 9]>
-			<style>
-				.content{
-					height: auto;
-					margin: 0;
-				}
-				.content div {
-					position: relative;
-				}
-			</style>
-		<![endif]-->
-		    <style>
+
+<head>
+    <title>
+      Centro de Mozilla Hispano
+    </title>
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script src="css/foundation/javascripts/jquery.min.js"></script>
+    <script src="css/foundation/javascripts/foundation.js"></script>
+    <script src="css/foundation/javascripts/app.js"></script>
+    <style>
+        @import url(css/FontAwesome/css/font-awesome.css);
+        @import url(css/foundation/stylesheets/foundation.css);
+        @import url(css/foundation/stylesheets/app.css);
+
             body {
                 /* Disable scrollbars */
                 overflow: hidden;
@@ -55,52 +45,81 @@
                 bottom: 0;
                 background: inherit;
             }
-
     </style>
-    </head>
-    <body>
-	  <img src="images/mozillalogo.png" style="padding: 10px 0 0 55px;"/>
-	 <div id="wrapper">
+</head>
+
+<body>
+    <!-- Wrapper for background -->
+    <div id="wrapper">
 
       <div id="remo-top">
-        <div class="container">
-			<section class="tabs">
-	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
-		        <label for="tab-1" class="tab-label-1">Tablero</label>
-		
-	            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
-		        <label for="tab-2" class="tab-label-2">Enlaces</label>
-		
-	            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
-		        <label for="tab-3" class="tab-label-3">Social</label>
-			
-	            <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
-		        <label for="tab-4" class="tab-label-4">Acerca de</label>
-            
-			    <div class="clear-shadow"></div>
-			
-		        <div class="content">
-			        <div class="content-1">
-						<h2>Contenido A Editar</h2>
-                        <p>Pensado algo para mas adelante!</p>
-				    </div>
-			        <div class="content-2">
-					    <h2>Contenido A Editar</h2>
-                        <p>Pensado algo para mas adelante!</p>
-				    </div>
-			        <div class="content-3">
-						<h2>Contenido A Editar</h2>
-                        <p>Pensado algo para mas adelante!</p>
-				    </div>
-				    <div class="content-4">
-						<h2>Contenido A Editar</h2>
-                        <p>Pensado algo para mas adelante!</p>				    
-						</div>
-		        </div>
-			</section>
-        </div>
+
+        <header id="banner">
+
+            <h2><img src="Cmh32.png" style="vertical-align: middle; padding: 0 1.0em;"/>Centro de Mozilla Hispano</h2>
+
+        </header>
+
+        <dl class="tabs contained">
+          <dd><a href="#simpleContained1" class="active">Noticias</a></dd>
+          <dd><a href="#simpleContained2">Mi Tablero</a></dd>
+          <dd><a href="#simpleContained3">Enlaces</a></dd>
+          <dd><a href="#simpleContained4">Buscador</a></dd>
+          <dd><a href="#simpleContained5">Social</a></dd>
+		  <dd><a href="#simpleContained6">Acerca de</a></dd>
+        </dl>
+
+      </div>
+
+      <div id="remo-main">
+
+        <ul class="tabs-content contained">
+          <li class="active" id="simpleContained1Tab">
+
+		  </li>
+          <li id="simpleContained2Tab">
+          <p>
+		  Aquí viene algunas partes que están en el perfil de la pagina de la wiki de Mozilla Hispano, o el mapa de colaboradores, en si ustedes mediran que irá mejor aquí!
+          </p>
+          </li>
+          <li id="simpleContained3Tab">
+          <p>
+		  Que enlaces rapidos les gustaria ver? A SUMO, alguna pagina de la documentación?
+          </p>
+          </li>
+          <li id="simpleContained4Tab">
+          </li>
+		  <li id="simpleContained5Tab">
+          <p>
+		  <a href="https://twitter.com/mozilla_hispano"><img src="img/twitter.png" alt="Twitter"></a>
+          </p>
+          </li>
+          <li id="simpleContained6Tab">
+            <div>
+              <img src="img/logoabout.png" alt="Logo Mozilla Hispano">
+              <p class="first" align="justify">El Centro de Mozilla Hispano, es una Addon creado con el fin de facilitar el acceso a distintas herramientas o información que en las diferentes areas y secciones de la comunidad es necesario un facil acceso. El uso de este Addon no es limitado a cierto personal, esta libre para el uso por parte de todo aquel que lo desee o lo necesite, desde aprendices hasta miembros activos. El Addon ha sido creado con ayuda de toda la comunidad Mozilla Hispano, así que por lo general deberia funcionar y satisfacer a cada una de las comunidades locales que conforman Mozilla Hispano en cada país.</p>
+
+              <p align="justify">
+				  El uso de este Addon es gratuito y está sujeto a la licencia <a target="_blank" href="http://mozilla.org/MPL/2.0/">Mozilla Public License, v. 2.0</a>. El manejo del codigo es open source, puedes obtener una copia desde el repositorio de <a target="_blank" href="https://github.com/brianking/ReMo-Helper">Github</a>. Algunos iconos usados en este Addon son tomados de <a target="_blank" href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> y <a target="_blank" href="http://www.yootheme.com/icons/downloads">YOOtheme</a>. El nombre y logo de Mozilla Hispano son marcas de la comunidad Mozilla Hispano, puede leer los terminos y condiciones de uso <a target="_blank" href="http://foundation.zurb.com/">aquí</a>. Parte de este Addon utiliza <a target="_blank" href="http://foundation.zurb.com/">Foundation</a>, Esta bajo los terminos de la licencia <a target="_blank" href="http://foundation.zurb.com/">MIT</a>.
+              </p>
+
+              <p align="justify">
+                Este Addon fue creado gracias a la comunidad Mozilla Hispano y demás personas de las distintas comunidades locales, aquí el listado del personal que hizo posible esto:
+              </p>
+			<p>
+				<i class="icon-user"></i> <a target="_blank" href="https://www.mozilla-hispano.org/documentacion/Usuario:Willyaranda">Willyaranda</a> : <i class="icon-star"></i> Idea
+              </p>
+			  <p>
+                <i class="icon-user"></i> <a target="_blank" href="https://www.mozilla-hispano.org/documentacion/Usuario:Gioyik">Gioyik</a> : <i class="icon-signal"></i> Desarrollo Principal
+				</p>
+            </div>
+          </li>
+        </ul>
+
       </div>
 
     </div>
-    </body>
+
+</body>
+
 </html>
