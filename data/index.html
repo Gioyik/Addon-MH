@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Centro de Mozilla Hispano</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Animated Content Tabs with CSS3" />
+        <meta name="keywords" content="tabs, css3, transition, checked, pseudo-class, label, css-only, sibling combinator" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+			<style>
+				.content{
+					height: auto;
+					margin: 0;
+				}
+				.content div {
+					position: relative;
+				}
+			</style>
+		<![endif]-->
+		    <style>
+            body {
+                /* Disable scrollbars */
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
+
+            p.first {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            #remo-top {
+                padding: 20px 0 0 0;
+                background: inherit;
+                /* Always on screen */
+                position: absolute;
+                width: 100%;
+                height: 80px;
+            }
+
+            #remo-main {
+                /* Provide scrollbars if needed and position below header */
+                overflow: auto;
+                position: fixed;
+                width: 100%;
+                top: 100px;
+                bottom: 0;
+                background: inherit;
+            }
+
+    </style>
+    </head>
+    <body>
+	  <img src="images/mozillalogo.png" style="padding: 10px 0 0 55px;"/>
+	 <div id="wrapper">
+
+      <div id="remo-top">
+        <div class="container">
+			<section class="tabs">
+	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+		        <label for="tab-1" class="tab-label-1">Tablero</label>
+		
+	            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+		        <label for="tab-2" class="tab-label-2">Enlaces</label>
+		
+	            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+		        <label for="tab-3" class="tab-label-3">Social</label>
+			
+	            <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+		        <label for="tab-4" class="tab-label-4">Acerca de</label>
+            
+			    <div class="clear-shadow"></div>
+			
+		        <div class="content">
+			        <div class="content-1">
+						<h2>Contenido A Editar</h2>
+                        <p>Pensado algo para mas adelante!</p>
+				    </div>
+			        <div class="content-2">
+					    <h2>Contenido A Editar</h2>
+                        <p>Pensado algo para mas adelante!</p>
+				    </div>
+			        <div class="content-3">
+						<h2>Contenido A Editar</h2>
+                        <p>Pensado algo para mas adelante!</p>
+				    </div>
+				    <div class="content-4">
+						<h2>Contenido A Editar</h2>
+                        <p>Pensado algo para mas adelante!</p>				    
+						</div>
+		        </div>
+			</section>
+        </div>
+      </div>
+
+    </div>
+    </body>
+</html>
