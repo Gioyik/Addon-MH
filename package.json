@@ -4,8 +4,9 @@
     "author": "Gioyik", 
 	"icon": "data/logo48.png",
 	"icon64": "data/logo64.png",
-    "version": "0.1", 
+    "version": "0.2", 
     "fullName": "Centro de Mozilla Hispano", 
     "id": "jid1-rb14ObymAuK4Qw", 
-    "description": "Addon especial para la comunidad Mozilla Hispano"
+	"homepage": "https://mozilla-hispano.org/",
+	"description": "Addon especial para la comunidad Mozilla Hispano"
 }
