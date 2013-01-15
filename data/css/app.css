@@ -42,7 +42,7 @@ p.first {
 }
 
 #remo-top {
-	background: url('../img/bg-stone.png') 0 0 repeat-x;
+	background: url('../img/bg-sky.png') 0 0 repeat-x;
 	padding: 20px 0 0 0;
 	position: absolute;
 	width: 100%;
@@ -50,7 +50,7 @@ p.first {
 }
 
 #remo-main {
-	background: #F8F8F8 url('../img/bg-stone.png') 0 0 repeat-x;
+	background: #F8F8F8 url('../img/bg-sky.png') 0 0 repeat-x;
 	overflow: auto;
 	position: fixed;
 	width: 100%;
@@ -59,4 +59,14 @@ p.first {
 }
 .ItemTitle {
   padding: 5px;
+}
+
+dl.tabs dd a.active  {
+	background-image: linear-gradient(rgb(60, 136, 204), rgb(39, 97, 149));
+	color: white;
+}
+
+dl.tabs dd a  {
+	background-image: linear-gradient(rgb(39, 97, 149), rgb(39, 97, 149));
+	color: white;
 }
