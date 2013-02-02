@@ -5,7 +5,7 @@ Developers:
 -----------
 * Gioyik 
 * Willyaranda
-* WillyAguirre
+* [Willy Aguirre](https://mozillians.org/es/u/willyaguirre)
 * DeibyOd
 
 Funciones que se deben tener en el Addon:
