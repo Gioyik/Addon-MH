@@ -3,10 +3,10 @@ Addon Comunitario de Mozilla Hispano
 
 Developers: 
 -----------
-* Gioyik 
-* Willyaranda
+* [Gioyik](https://mozillians.org/es/u/Gioyik) 
+* [Willy Aranda](https://mozillians.org/es/u/willyaranda)
 * [Willy Aguirre](https://mozillians.org/es/u/willyaguirre)
-* DeibyOd
+* [Deiby Od](https://mozillians.org/es/u/deibyod)
 
 Funciones que se deben tener en el Addon:
 --------------------
