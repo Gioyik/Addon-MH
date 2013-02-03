@@ -29,7 +29,23 @@
             success: function (data) {
                 $('#' + idd).empty();
                 $.each(data.responseData.feed.entries, function (i, entry) {
-					var title = entry.title;                    
+					var title = entry.title;
+                    title = title.replace("David Bengoa (YouWoTMA) :", " ");
+                    title = title.replace("Felipe Lerena (L1pe) :", " ");
+                    title = title.replace("Francisco Picolini (FrancJP) :", " ");
+                    title = title.replace("Giovanny G\u00f3ngora (Gioyik) :", " ");
+                    title = title.replace("Gloria Meneses (Izel) :", " ");
+                    title = title.replace("Guillermo L\u00f3pez (Willyaranda) :", " ");
+                    title = title.replace("Guillermo Movia (Deimidis) :", " ");
+                    title = title.replace("Jorge Villalobos (jorgev) :", " ");
+                    title = title.replace("Jusa\u00ed Prieto :", " ");
+                    title = title.replace("Lourdes Castillo :", " ");
+                    title = title.replace("Noctuido :", " "); 
+                    title = title.replace("Pascal Chevrel (Pascalc) :", " "); 
+                    title = title.replace("Ricardo Palomares (rickiees) :", " "); 
+                    title = title.replace("Rub\u00e9n Mart\u00edn (Nukeador) :", " "); 
+                    title = title.replace("Santiago Hollmann (Nuno) :", " ");
+                    title = title.replace("Willy Aguirre :", " ");               
                     /*title = title.replace(/(\w+)(\s\w+\s:)|(\w+)(\s:)|(\w+)/, " ");
                     title = title.replace(/\u00ed/, " ");
                     title = title.replace(/\w+\s:/, " ");    */                
