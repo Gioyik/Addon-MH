@@ -23,7 +23,7 @@
                 <dd><a class="active" href=
                 "#simpleContained1">Noticias</a></dd>
 
-                <dd><a href="#simpleContained2">Mi Tablero</a></dd>
+                <dd><a href="#simpleContained2">Tablero</a></dd>
 
                 <dd><a href="#simpleContained3">Enlaces</a></dd>
 
@@ -38,7 +38,14 @@
         <div id="remo-main">
             <ul class="tabs-content contained">
                 <li class="active" id="simpleContained1Tab">
-                    <div id="divRss"></div>
+                    <dl class="tabs">
+                      <dd class="active"><a href="#simple1">Mozilla Hispano</a></dd>
+                      <dd><a href="#simple2">Planet</a></dd>                      
+                    </dl>
+                    <ul class="tabs-content">
+                      <li class="active" id="simple1Tab"><div id="divRss"></div></li>
+                      <li id="simple2Tab"><div id="divPlanetRss"></div></li>
+                    </ul>                    
                 </li>
 
                 <li id="simpleContained2Tab">
