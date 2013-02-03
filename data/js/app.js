@@ -90,15 +90,21 @@ jQuery(document).ready(function ($) {
 
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
-  
+
 	/* RSS */
 	$('#divRss').FeedEk({
+		FeedUrl : 'http://feeds.mozilla-hispano.org/mozillahispano',
+		MaxCount : 8,
+		ShowDesc : true,
+		ShowPubDate:true
+    }); 
+  
+	/* RSS Planet */
+	$('#divPlanetRss').FeedEk({
 		FeedUrl : 'http://feeds.mozilla-hispano.org/mozillahispano-planet',
 		MaxCount : 8,
 		ShowDesc : true,
 		ShowPubDate:true
     }); 
-    
-    
 
 });

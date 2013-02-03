@@ -30,9 +30,9 @@
                 $('#' + idd).empty();
                 $.each(data.responseData.feed.entries, function (i, entry) {
 					var title = entry.title;                    
-                    title = title.replace(/(\w+)(\s\w+\s:)|(\w+)(\s:)|(\w+)/, " ");
+                    /*title = title.replace(/(\w+)(\s\w+\s:)|(\w+)(\s:)|(\w+)/, " ");
                     title = title.replace(/\u00ed/, " ");
-                    title = title.replace(/\w+\s:/, " ");
+                    title = title.replace(/\w+\s:/, " ");    */                
                     $('#' + idd).append('<div class="ItemTitle"><a id="rtitle" href="' + entry.link + '" target="_blank" >' + title + '</a></div>');
                     
                     //$("#rtitle").html(title);
