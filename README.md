@@ -17,3 +17,13 @@ Funciones que se deben tener en el Addon:
 * En la pestaña de "Buscador" hacer algo como un pequeño buscador alli que al ponerle una entrada o algun texto a buscar me busque en las paginas de SUMO, Wiki de Mozilla Hispano, Foro y ver si hay otros sitios necesarios.
 * En la pestaña de "Social" habria que poner widgets que muestren algun streaming de las cuentas en las redes sociales de Mozilla Hispano.
 * Y en "Acerca de" pues agregar los comentarios y echar parla! :P
+
+Pasos para probar el Addon:
+--------------------------
+
+* [Descargar el SDK de complementos](https://addons.mozilla.org/es/developers/builder)
+* Ingresar y descomprimir el SDK **tar -xf addon-sdk.tar.gz | cd addon-sdk**
+* Ejecutar: **source bin/activate** y vera **(addon-sdk) ~/addon-sdk $**
+* copiar el repocitorio: **git clone git@github.com:Gioyik/Addon-MH.git**
+* Ingresar a la carpeta donde esta ubicado Addon **$ cd Addon-MH** y ejecutar **cfx run**
+
