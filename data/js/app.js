@@ -107,4 +107,12 @@ jQuery(document).ready(function ($) {
 		ShowPubDate:true
     }); 
 
+	/* RSS Reuniones */
+    $('#reuRss').FeedEk({
+		FeedUrl : 'https://www.mozilla-hispano.org/documentacion/Especial:Ask/-5B-5BCategor%C3%ADa:Reuniones-5D-5D/-3FArea/-3FProyecto/-3FFechainicio%3Dstart/limit%3D50/order%3DDESC/sort%3DFechainicio/format%3Drss/title%3DReuniones-20Mozilla-20Hispano/description%3DListado-20de-20reuniones-20comunitarias',
+		MaxCount : 8,
+		ShowDesc : true,
+		ShowPubDate:true
+    }); 
+
 });
