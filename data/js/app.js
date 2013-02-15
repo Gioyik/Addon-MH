@@ -113,6 +113,22 @@ jQuery(document).ready(function ($) {
 		MaxCount : 8,
 		ShowDesc : true,
 		ShowPubDate:true
-    }); 
+    });
+
+    /* RSS Eventos */
+    $('#eventosRss').FeedEk({
+		FeedUrl : 'https://www.mozilla-hispano.org/documentacion/Especial:Ask/-5B-5BCategor%C3%ADa:Evento-5D-5D/-3F%3DNombre-23/-3FFechainicio%3DFecha/-3FPais/-3FCiudad/-3FUrl/mainlabel%3DNombre/limit%3D50/order%3DDESC,DESC/sort%3DFechainicio,/format%3Drss',
+		MaxCount : 8,
+		ShowDesc : true,
+		ShowPubDate:true
+    });
+
+    /* RSS Tareas */
+    $('#tareasRss').FeedEk({
+		FeedUrl : 'https://www.mozilla-hispano.org/documentacion/Especial:Ask/-5B-5BCategor%C3%ADa:Tarea-5D-5D-5B-5Bestado::!Finalizado-5D-5D/limit%3D50/order%3DASC,DESC/sort%3DFechafin,Estado/format%3Drss',
+		MaxCount : 8,
+		ShowDesc : true,
+		ShowPubDate:true
+    });  
 
 });
