@@ -51,11 +51,12 @@ p.first {
 
 #remo-main {
 	background: #F8F8F8 url('../img/bg-sky.png') 0 0 repeat-x;
+	bottom: 0;
+	position: fixed;	
+	top: 80px;	
 	overflow: auto;
-	position: fixed;
 	width: 100%;
-	top: 100px;
-	bottom: 0;	
+	
 }
 .ItemTitle {
   padding: 5px;
