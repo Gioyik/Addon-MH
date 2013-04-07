@@ -70,3 +70,21 @@ dl.tabs dd a  {
 	background-image: linear-gradient(rgb(39, 97, 149), rgb(39, 97, 149));
 	color: white;
 }
+.button {
+    background: white;
+    display: inline-block;
+    text-align: center;
+    padding: 9px 34px 11px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1;
+    font-family: "Helvetica Neue","Helvetica",Arial,Verdana,sans-serif;
+    position: relative;
+    cursor: pointer;
+    border: medium none;
+    outline: medium none;
+    margin: 0px;
+}
+
