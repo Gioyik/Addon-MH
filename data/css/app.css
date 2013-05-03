@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: openSansBold;
-	font-size: 12px;
+	font-size: 12px;	
 }
 
 a, a:active, a:link, a:visited{
@@ -62,15 +62,27 @@ p.first {
   padding: 5px;
 }
 
-dl.tabs dd a.active  {
-	background-image: linear-gradient(rgb(60, 136, 204), rgb(39, 97, 149));
+.section-container.tabs section.active .title, .section-container.tabs .section.active .title {
+    background-image: linear-gradient(rgb(60, 136, 204), rgb(39, 97, 149));    
+    border-bottom: 0px none;
+}
+.section-container.tabs section.active .title, .section-container.tabs .section.active .title a {
 	color: white;
 }
 
-dl.tabs dd a  {
-	background-image: linear-gradient(rgb(39, 97, 149), rgb(39, 97, 149));
-	color: white;
+.section-container section .title, .section-container .section .title, .section-container.auto section .title, .section-container.auto .section .title {
+    top: 0px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0px;    
+    background-color: #B0C4DE;
 }
+
+.section-container section .title a, .section-container .section .title a, .section-container.auto section .title a, .section-container.auto .section .title a {
+    color: black;    
+}
+
+
 .button {
     background: white;
     display: inline-block;
@@ -87,5 +99,12 @@ dl.tabs dd a  {
     border: medium none;
     outline: medium none;
     margin: 0px;
+}
+
+
+.section-container section .content, .section-container .section .content, .section-container.auto section .content, .section-container.auto .section .content {
+    display: none;
+    padding: 0.9375em;
+    background-color: transparent;
 }
 
