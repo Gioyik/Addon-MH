@@ -24,6 +24,6 @@ Pasos para probar el Addon:
 * [Descargar el SDK de complementos](https://addons.mozilla.org/es/developers/builder)
 * Ingresar y descomprimir el SDK **tar -xf addon-sdk.tar.gz | cd addon-sdk**
 * Ejecutar: **source bin/activate** y vera **(addon-sdk) ~/addon-sdk $**
-* copiar el repositorio: **git clone git@github.com:Gioyik/Addon-MH.git**
+* Copiar el repositorio: **git clone git@github.com:Gioyik/Addon-MH.git**
 * Ingresar a la carpeta donde esta ubicado Addon **$ cd Addon-MH** y ejecutar **cfx run**
 
