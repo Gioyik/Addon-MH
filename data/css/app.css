@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: openSansBold;
-	font-size: 12px;	
+	font-size: 11px;	
 }
 
 a, a:active, a:link, a:visited{
@@ -39,6 +39,11 @@ h2 {
 p.first {
 	padding-top: 0 !important;
 	margin-top: 0 !important;
+}
+
+li {
+    list-style: none;
+    padding-left: 10px; 
 }
 
 #remo-top {
@@ -101,10 +106,39 @@ p.first {
     margin: 0px;
 }
 
-
 .section-container section .content, .section-container .section .content, .section-container.auto section .content, .section-container.auto .section .content {
     display: none;
     padding: 0.9375em;
     background-color: transparent;
 }
 
+.icon-search {
+    font-size: 200%;
+}
+
+.areas {
+    float: left;
+    background-color: rgba(244,244,244,0.6);
+    margin: 0.4em;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    width: 45%;
+    max-width: 16em;
+    height: 16em;
+    overflow: hidden;
+    opacity: 0.7;
+    box-shadow: inset 0 0 5px #666;
+}
+.areas:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 10px #555;
+}
+.desc {
+    font-size: 0.9em;
+}
+.social img {
+    opacity: 0.7;
+}
+.social img:hover {
+    opacity: 0.9;
+}
