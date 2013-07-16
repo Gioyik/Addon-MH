@@ -8,6 +8,17 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">    
     
     <script src="js/vendor/custom.modernizr.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#busqueda").keypress(function(){
+                var criterioBusqueda = $("#busqueda").val();
+                var urlBusqueda = "http://www.mozilla-hispano.org/?s="+criterioBusqueda;
+                $("#buscar").attr("href",urlBusqueda);
+            });
+            $("li").prepend("<i class='icon-fighter-jet'></i> ");
+        });
+    </script>
 </head>
 
 <body>
@@ -22,89 +33,135 @@
 	<div class="section-container tabs" data-section="tabs">
 		<section class="section">
 			<p class="title"><a href="#">Reuniones</a></p>
-				<div class="content">
-					<p>
-						<a href="https://www.mozilla-hispano.org/documentacion/Form:Reunion" class="small button success">
-							<i class="icon-plus"></i>&nbsp;A&ntilde;adir Reuni&oacute;n
-						</a>
-                     </p>
-				</div>
+			<div class="content">
+                <p>
+                     <ul>
+                        <li>
+                            <a href="https://www.mozilla-hispano.org/documentacion/Form:Reunion" class="small button success" target="_blank">
+                                <i class="icon-plus"></i>&nbsp;A&ntilde;adir Reuni&oacute;n
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla-hispano.org/documentacion/Reuniones" class="small button success" target="_blank">
+                                <i class="icon-coffee"></i>&nbsp;Ver Pr&oacute;ximas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla-hispano.org/documentacion/Reuniones/Procedimientos" class="small button success" target="_blank">
+                                <i class="icon-coffee"></i>&nbsp;Documentaci&oacute;n
+                            </a>
+                        </li>
+                    </ul>
+                </p>
+			</div>
 		</section>
+        <section class="section">
+            <p class="title"><a href="#">Eventos</a></p>
+            <div class="content">
+                <p>
+                     <ul>
+                        <li>&nbsp;A&ntilde;adir Evento</li>
+                        <li>Ver Pr&oacute;ximos</li>
+                        <li>Documentaci&oacute;n</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
 		<section class="section">
 			<p class="title"><a href="#">&Aacute;reas</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<div class="content">
+                <p>
+                    Nombre área --> Responsable + Correo + Texto personalizado del áre
+                </p>
+			</div>
 		</section>
 		<section class="section">
 			<p class="title"><a href="#">Tareas</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<div class="content">
+                <p>Nom. Área --> Links</p>
+                <p>Tareas sencillas</p>
+			</div>
 		</section>
 		<section class="section">
 			<p class="title"><a href="#">Mentor&iacute;a</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<div class="content">
+                <p>Emails Procedimientos ---> Recordatorios + Segundo contacto + Etc.</p>
+                <p>Hoja de colaboradores</p>
+			</div>
 		</section>
+        <section class="section">
+            <p class="title"><a href="#">Buscar</a></p>
+            <div class="content">
+                <div class="row">
+                    <div class="large-12 columns">
+                      <div class="row collapse">
+                        <div class="small-10 columns">
+                          <input type="text" id="busqueda" size="3em" width="" placeholder="Buscar...">
+                        </div>
+                        <div class="small-2 columns">
+                            <a id="buscar" target="_blank"><i class="icon-search"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 		<section class="section">
 			<p class="title"><a href="#">Acerca de</a></p>
-				<div class="content">
-					<p>
-						<img alt="Logo Mozilla Hispano" src=
-                        "img/logoabout.png">
+			<div class="content">
+				<p>
+					<img alt="Logo Mozilla Hispano" src="img/logoabout.png" width="100%">
 
-                        <p class="first" style="text-align: justify">El Centro
-                        de Mozilla Hispano, es una Addon creado con el fin de
-                        facilitar el acceso a distintas herramientas o
-                        informaci&oacute;n que en las diferentes areas y secciones de
-                        la comunidad es necesario un facil acceso. El uso de
-                        este Addon no es limitado a cierto personal, esta libre
-                        para el uso por parte de todo aquel que lo desee o lo
-                        necesite, desde aprendices hasta miembros activos. El
-                        Addon ha sido creado con ayuda de toda la comunidad
-                        Mozilla Hispano, as&iacute; que por lo general deberia
-                        funcionar y satisfacer a cada una de las comunidades
-                        locales que conforman Mozilla Hispano en cada pa&iacute;s.</p>
+                    <p class="first" style="text-align: justify">El Centro
+                    de Mozilla Hispano, es una Addon creado con el fin de
+                    facilitar el acceso a distintas herramientas o
+                    informaci&oacute;n que en las diferentes areas y secciones de
+                    la comunidad es necesario un facil acceso. El uso de
+                    este Addon no es limitado a cierto personal, esta libre
+                    para el uso por parte de todo aquel que lo desee o lo
+                    necesite, desde aprendices hasta miembros activos. El
+                    Addon ha sido creado con ayuda de toda la comunidad
+                    Mozilla Hispano, as&iacute; que por lo general deberia
+                    funcionar y satisfacer a cada una de las comunidades
+                    locales que conforman Mozilla Hispano en cada pa&iacute;s.</p>
 
-                        <p style="text-align: justify">El uso de este Addon es
-                        gratuito y est&aacute; sujeto a la licencia <a href=
-                        "http://mozilla.org/MPL/2.0/" target="_blank">Mozilla
-                        Public License, v. 2.0</a>. El manejo del codigo es
-                        open source, puedes obtener una copia desde el
-                        repositorio de <a href=
-                        "https://github.com/brianking/ReMo-Helper" target=
-                        "_blank">Github</a>. Algunos iconos usados en este
-                        Addon son tomados de <a href=
-                        "http://fortawesome.github.com/Font-Awesome" target=
-                        "_blank">Font Awesome</a> y <a href=
-                        "http://www.yootheme.com/icons/downloads" target=
-                        "_blank">YOOtheme</a>. El nombre y logo de Mozilla
-                        Hispano son marcas de la comunidad Mozilla Hispano,
-                        puede leer los terminos y condiciones de uso <a href=
-                        "http://foundation.zurb.com/" target="_blank">aqu&iacute;</a>.
-                        Parte de este Addon utiliza <a href=
-                        "http://foundation.zurb.com/" target=
-                        "_blank">Foundation</a>, Esta bajo los terminos de la
-                        licencia <a href="http://foundation.zurb.com/" target=
-                        "_blank">MIT</a>.</p>
+                    <p style="text-align: justify">El uso de este Addon es
+                    gratuito y est&aacute; sujeto a la licencia <a href=
+                    "http://mozilla.org/MPL/2.0/" target="_blank">Mozilla
+                    Public License, v. 2.0</a>. El manejo del codigo es
+                    open source, puedes obtener una copia desde el
+                    repositorio de <a href=
+                    "https://github.com/brianking/ReMo-Helper" target=
+                    "_blank">Github</a>. Algunos iconos usados en este
+                    Addon son tomados de <a href=
+                    "http://fortawesome.github.com/Font-Awesome" target=
+                    "_blank">Font Awesome</a> y <a href=
+                    "http://www.yootheme.com/icons/downloads" target=
+                    "_blank">YOOtheme</a>. El nombre y logo de Mozilla
+                    Hispano son marcas de la comunidad Mozilla Hispano,
+                    puede leer los terminos y condiciones de uso <a href=
+                    "http://foundation.zurb.com/" target="_blank">aqu&iacute;</a>.
+                    Parte de este Addon utiliza <a href=
+                    "http://foundation.zurb.com/" target=
+                    "_blank">Foundation</a>, Esta bajo los terminos de la
+                    licencia <a href="http://foundation.zurb.com/" target=
+                    "_blank">MIT</a>.</p>
 
-                        <p style="text-align: justify">Este Addon fue creado
-                        gracias a la comunidad Mozilla Hispano y dem&aacute;s personas
-                        de las distintas comunidades locales, aqu&iacute; el listado
-                        del personal que hizo posible esto:</p>
+                    <p style="text-align: justify">Este Addon fue creado
+                    gracias a la comunidad Mozilla Hispano y dem&aacute;s personas
+                    de las distintas comunidades locales, aqu&iacute; el listado
+                    del personal que hizo posible esto:</p>
 
-                        <p><i class="icon-user"></i><a href=
-                        "https://www.mozilla-hispano.org/documentacion/Usuario:Willyaranda"
-                        target="_blank">Willyaranda</a> : <i class="icon-star"></i> Idea</p>
+                    <p><i class="icon-user"></i><a href=
+                    "https://www.mozilla-hispano.org/documentacion/Usuario:Willyaranda"
+                    target="_blank">Willyaranda</a> : <i class="icon-star"></i> Idea</p>
 
-                        <p><i class="icon-user"></i><a href=
-                        "https://www.mozilla-hispano.org/documentacion/Usuario:Gioyik"
-                        target="_blank">Gioyik</a> : <i class="icon-signal"></i> Desarrollo Principal</p>
-					</p>
-				</div>
-		</section>		
+                    <p><i class="icon-user"></i><a href=
+                    "https://www.mozilla-hispano.org/documentacion/Usuario:Gioyik"
+                    target="_blank">Gioyik</a> : <i class="icon-signal"></i> Desarrollo Principal</p>
+				</p>
+			</div>
+		</section>
 	</div>	
 </div>
 

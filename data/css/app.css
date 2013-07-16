@@ -41,6 +41,11 @@ p.first {
 	margin-top: 0 !important;
 }
 
+li {
+    list-style: none;
+    padding-left: 10px; 
+}
+
 #remo-top {
 	background: url('../img/bg-sky.png') 0 0 repeat-x;
 	padding: 20px 0 0 0;
@@ -108,3 +113,6 @@ p.first {
     background-color: transparent;
 }
 
+.icon-search {
+    font-size: 200%;
+}
