@@ -8,6 +8,28 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">    
     
     <script src="js/vendor/custom.modernizr.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/zrssfeed/jquery.zrssfeed.min.js" type="text/javascript"></script>
+    <script src="js/jquery.vticker.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#busqueda").keypress(function(){
+                var criterioBusqueda = $("#busqueda").val();
+                var urlBusqueda = "http://www.mozilla-hispano.org/?s="+criterioBusqueda;
+                $("#buscar").attr("href",urlBusqueda);
+            });
+            
+            $("li").prepend("<i class='icon-fighter-jet'></i> ");
+
+            $('#mozhispano').rssfeed('http://feeds.mozilla-hispano.org/mozillahispano',{}, function(e) {
+                $(e).find('div.rssBody').vTicker({ showItems: 1});
+            });
+            $('#planet').rssfeed('http://feeds.mozilla-hispano.org/mozillahispano-planet',{}, function(e) {
+                $(e).find('div.rssBody').vTicker({ showItems: 1});
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -20,91 +42,238 @@
 
 <div id="remo-main">
 	<div class="section-container tabs" data-section="tabs">
+        <section class="section">
+            <p class="title"><a href="#">Noticias</a></p>
+            <div class="content">
+                <div class="row">
+                    <div class="small-6 columns">
+                        <h3>Noticias Mozilla Hispano</h3>
+                        <div id="mozhispano"></div>
+                    </div>
+                    <div class="small-6 columns">
+                        <h3>Planet</h3>
+                        <div id="planet"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 		<section class="section">
-			<p class="title"><a href="#">Reuniones</a></p>
-				<div class="content">
-					<p>
-						<a href="https://www.mozilla-hispano.org/documentacion/Form:Reunion" class="small button success">
-							<i class="icon-plus"></i>&nbsp;A&ntilde;adir Reuni&oacute;n
-						</a>
-                     </p>
-				</div>
-		</section>
-		<section class="section">
-			<p class="title"><a href="#">&Aacute;reas</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<p class="title"><a href="#">Tablero</a></p>
+			<div class="content">
+                <div class="row">
+                    <div class="small-6 columns">
+                        <h3>Reuniones</h3>
+                        <p>
+                             <ul>
+                                <li>
+                                    <a href="https://www.mozilla-hispano.org/documentacion/Form:Reunion" class="small button success" target="_blank">
+                                        <i class="icon-plus"></i>&nbsp;A&ntilde;adir Reuni&oacute;n
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.mozilla-hispano.org/documentacion/Reuniones" class="small button success" target="_blank">
+                                        <i class="icon-coffee"></i>&nbsp;Ver Pr&oacute;ximas&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.mozilla-hispano.org/documentacion/Reuniones/Procedimientos" class="small button success" target="_blank">
+                                        <i class="icon-book"></i>&nbsp;Documentaci&oacute;n
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="small-6 columns">
+                        <h3>Eventos</h3>
+                        <p>
+                             <ul>
+                                <li>
+                                    <a href="https://www.mozilla-hispano.org/documentacion/Form:Evento" class="small button success" target="_blank">
+                                        <i class="icon-plus"></i>&nbsp;A&ntilde;adir Evento
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.mozilla-hispano.org/documentacion/Eventos" class="small button success" target="_blank">
+                                        <i class="icon-beer"></i>&nbsp;Ver Pr&oacute;ximos&nbsp;
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+			</div>
 		</section>
 		<section class="section">
 			<p class="title"><a href="#">Tareas</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<div class="content">
+                <p>Las tareas se estan migrando al <a href="http://intranet.mozilla-hispano.org/" target="_blank">nuevo sistema de tareas</a>. La característica será implementada según se profundice en este nuevo sistema.</p>
+			</div>
 		</section>
 		<section class="section">
 			<p class="title"><a href="#">Mentor&iacute;a</a></p>
-				<div class="content">
-					<p>Content of section 2.</p>
-				</div>
+			<div class="content">
+                <p>Emails Procedimientos ---> Recordatorios + Segundo contacto + Etc.</p>
+                <p>Hoja de colaboradores</p>
+			</div>
 		</section>
+        <section class="section">
+            <p class="title"><a href="#">Social</a></p>
+            <div class="content">
+                <p class="social">
+                    <a href="http://twitter.com/mozilla_hispano" target="_blank"><img src="img/twitter.png"></a>
+                    <a href="http://www.facebook.com/mozillahispano" target="_blank"><img src="img/facebook.png"></a>
+                    <a href="https://plus.google.com/113725577998863887008/posts" target="_blank"><img src="img/gplus.png"></a>
+                    <a href="http://www.youtube.com/mozillahispano" target="_blank"><img src="img/youtube.png"></a>
+                    <a href="http://www.flickr.com/photos/tags/mozillahispano/" target="_blank"><img src="img/flickr.png"></a>
+                    <a href="http://feeds.mozilla-hispano.org/mozillahispano" target="_blank"><img src="img/rss.png"></a>
+                </p>
+                <p>NOTA: Por favor, facilitar código de incrustación del Twitter de Mozilla Hispano-</p>
+            </div>
+        </section>
+        <section class="section">
+            <p class="title"><a href="#">&Aacute;reas</a></p>
+            <div class="content">
+                <p>
+                     <div class="areas">
+                        <h3> <a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Asistencia">Asistencia a usuarios</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Asistencia"><img title="" src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/system-help.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Asistencia"><span style="display: block;" class="desc">Ayuda a usuarios menos expertos</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Asistencia"><span style="display: none;" >Ayuda contestando dudas o problemas de otros usuarios menos expertos que tú</span></a></p>
+                        <p><b>Responsable:</b> <a target="_blank" href="/documentacion/Usuario:Jusa%C3%AD" title="Usuario:Jusaí">Jusaí</a> (Jusaí Prieto)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Noticias">Escribe noticias</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Noticias"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/spread.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Noticias"><span style="display: block;" class="desc">Escribe noticias y análisis de los productos</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Noticias"><span style="display: none;" >Puedes colaborar como redactor de noticias y análisis del mundo Mozilla para acercar las últimas novedades a los usuarios hispanohablantes</span></a></p>
+                        <p><b>Responsable:</b> <a href="/documentacion/Usuario:Deimidis" title="Usuario:Deimidis">Deimidis</a> (Guillermo Movia) </p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Difusi%C3%B3n">Difusión</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Difusi%C3%B3n"><img title="" src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/network-wireless.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Difusi%C3%B3n"><span style="display: block;" class="desc">Difunde los productos Mozilla</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Difusi%C3%B3n"><span style="display: none;" >Habla de las ventajas de usar los productos de Mozilla a tus amigos, familiares o compañeros de trabajo.</span></a></p>
+                        <p><b>Responsable:</b> <a href="/documentacion/Usuario:Bernimel" title="Usuario:Bernimel">Bernimel</a> (Berni Melero)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Localizaci%C3%B3n">Traducción web</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Localizaci%C3%B3n"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/preferences-contact-list.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Localizaci%C3%B3n"><span style="display: block;" class="desc">Ayuda a entender las webs a tus paisanos</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Localizaci%C3%B3n"><span style="display: none;" >Muchas de las webs de Mozilla se traducen colaborativamente entre los distintos países hispanohablantes, únete a la lista comunitaria para ayudar.</span></a></p>
+                        <p><b>Responsable:</b> <a href="/documentacion/Usuaria:Hadeluna" title="Usuaria:Hadeluna">hadeluna</a> (Hanna De Luna), <a href="/documentacion/Usuario:Breaking_Pitt" title="Usuario:Breaking Pitt">Breaking Pitt</a> (Pedro García Rodríguez)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Labs">Labs</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Labs"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/preferences-system.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Labs"><span style="display: block;" class="desc">Programa, arregla, crea</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Labs"><span style="display: none;" >Únete a la gran comunidad de desarrolladores de Mozilla Hispano Labs y haz mejorar los productos. Hay trabajo en CSS, JavaScript y también para programadores C++</span></a></p>
+                        <p><b>Responsable:</b> <a href="/documentacion/Usuario:Fjaguero" title="Usuario:Fjaguero">Fjaguero</a> (Fernando Agüero), <a href="/documentacion/Usuario:Youwotma" title="Usuario:Youwotma">Youwotma</a> (David Bengoa)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Documentacion">Escribe documentos</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Documentacion"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/book.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Documentacion"><span style="display: block;" class="desc">Escribe documentación y tutoriales</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Documentacion"><span style="display: none;" >Puedes escribir documentación de ayuda, preguntas frecuentes o tutoriales para usuario en la documentación comunitaria</span></a></p>
+                        <p><b>Coordinación:</b> <a href="/documentacion/Usuaria:Inma_610" title="Usuaria:Inma 610">Inma_610</a> (Inma Barrios), <a href="/documentacion/Usuario:Izel" title="Usuario:Izel">Izel</a> (Gloria Patricia Meneses Portilla)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Control_de_calidad">Control de calidad</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Control_de_calidad"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/kbugbuster.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Control_de_calidad"><span style="display: block;" class="desc">Encuentra problemas en las versiones de prueba</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Control_de_calidad"><span style="display: none;" >Visita bugzilla e informa de errores en las aplicaciones, procura informar antes en los foros para verificar que realmente es un error generalizado y cómo informar de ello.</span></a></p>
+                        <p><b>Responsable:</b> <a href="/documentacion/Usuario:Gaby2300" title="Usuario:Gaby2300">Gaby2300</a> (Gabriela Montagu)</p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Equipo_creativo">Se creativo</a></h3>
+                        <p><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Equipo_creativo"><img title="" src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/system-users.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Equipo_creativo"><span style="display: block;" class="desc">Crea imágenes y contenido multimedia</span></a><a target="_blank" href="http://www.mozilla-hispano.org/documentacion/Equipo_creativo"><span style="display: none;" >Crea imágenes y contenido multimedia</span></a></p>
+                        <p><b>Coordinación:</b> <a href="/documentacion/Usuario:Javfox" title="Usuario:Javfox">Javfox</a> (Javier Dávalos)</p>
+                    </div>
+                     <div class="areas">
+                        <h3>Traducción de productos</h3>
+                        <p><img title="" src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/applications-development-translation.png" alt="icon"><span style="display: block;" class="desc">Colabora con los distintos grupos de traducción: <a target="_blank"rel="nofollow" class="external text" href="http://www.proyectonave.es/colabora">España</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozilla-ar.org/">Argentina</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozillabolivia.org/participa">Bolivia</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozillaparaguay.org">Paraguay</a>, <a target="_blank"rel="nofollow" class="external text" href="http://mozilla.pe/guias">Perú</a>,  <a target="_blank"rel="nofollow" class="external text" href="http://mozillacolombia.org/?page_id=3">Colombia</a>, <a target="_blank"rel="nofollow" class="external text" href="http://mozilla-mexico.sourceforge.net/?page_id=14">México</a> o <a target="_blank"rel="nofollow" class="external text" href="http://www.chilemoz.org/colabora-con-nosotros">Chile</a></span><span style="display: none;" >Colabora con los distintos grupos de traducción: <a target="_blank"rel="nofollow" class="external text" href="http://www.proyectonave.es/colabora">España</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozilla-ar.org/">Argentina</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozillabolivia.org/participa">Bolivia</a>, <a target="_blank"rel="nofollow" class="external text" href="http://www.mozillaparaguay.org">Paraguay</a>, <a target="_blank"rel="nofollow" class="external text" href="http://mozilla.pe/guias">Perú</a>,  <a target="_blank"rel="nofollow" class="external text" href="http://mozillacolombia.org/?page_id=3">Colombia</a>, <a target="_blank"rel="nofollow" class="external text" href="http://mozilla-mexico.sourceforge.net/?page_id=14">México</a> o <a target="_blank"rel="nofollow" class="external text" href="http://www.chilemoz.org/colabora-con-nosotros">Chile</a></span></p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="https://developer.mozilla.org/es/Extensiones">Crea un complemento</a></h3>
+                        <p><a target="_blank" href="https://developer.mozilla.org/es/Extensiones"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/preferences-plugin.png" alt="icon"></a><a target="_blank" href="https://developer.mozilla.org/es/Extensiones"><span style="display: block;" class="desc">Añade funcionalidades a los productos Mozilla</span></a><a target="_blank" href="https://developer.mozilla.org/es/Extensiones"><span style="display: none;" >Añade a los productos Mozilla nuevas funcionalidades, sólo necesitas saber CSS y JavaScript para escribir tu primera extensión</span></a></p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=16">Debates</a></h3><p><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=16"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/help-hint.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=16"><span style="display: block;" class="desc">Da ideas para mejorar o debate sobre ellas</span></a><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=16"><span style="display: none;" >En los foros de debate y opinión puedes proponer mejoras a los productos o debatir sobre la dirección del proyecto Mozilla</span></a></p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=26">Eventos</a></h3><p><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=26"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/system-users.png" alt="icon"></a><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=26"><span style="display: block;" class="desc">Participa en eventos y campañas</span></a><a target="_blank" href="http://www.mozilla-hispano.org/foro/viewforum.php?f=26"><span style="display: none;" >Pásate por los foros de difusión y eventos para participar con tu comunidad local.</span></a></p>
+                    </div>
+                     <div class="areas">
+                        <h3><a target="_blank" href="http://www.maestrosdelweb.com/editorial/estandaresweb/">Estándares web</a></h3>
+                        <p><a target="_blank" href="http://www.maestrosdelweb.com/editorial/estandaresweb/"><img src="http://www.mozilla-hispano.org/documentacion/skins/bookjive/icons/preferences-web-browser-stylesheets.png" alt="icon"></a><a target="_blank" href="http://www.maestrosdelweb.com/editorial/estandaresweb/"><span style="display: block;" class="desc">Fomenta el uso de estándares</span></a><a target="_blank" href="http://www.maestrosdelweb.com/editorial/estandaresweb/"><span style="display: none;" >Fomentando el uso de estándares web, facilitaras la vida a los usuarios que quieran navegar usando navegadores que los respeten.</span></a></p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <p class="title"><a href="#">Buscar</a></p>
+            <div class="content">
+                <div class="row">
+                    <div class="large-12 columns">
+                      <div class="row collapse">
+                        <div class="small-10 columns">
+                          <input type="text" id="busqueda" size="3em" width="" placeholder="Buscar...">
+                        </div>
+                        <div class="small-2 columns">
+                            <a id="buscar" target="_blank"><i class="icon-search"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 		<section class="section">
 			<p class="title"><a href="#">Acerca de</a></p>
-				<div class="content">
-					<p>
-						<img alt="Logo Mozilla Hispano" src=
-                        "img/logoabout.png">
+			<div class="content">
+				<p>
+					<img alt="Logo Mozilla Hispano" src="img/logoabout.png" width="100%">
 
-                        <p class="first" style="text-align: justify">El Centro
-                        de Mozilla Hispano, es una Addon creado con el fin de
-                        facilitar el acceso a distintas herramientas o
-                        informaci&oacute;n que en las diferentes areas y secciones de
-                        la comunidad es necesario un facil acceso. El uso de
-                        este Addon no es limitado a cierto personal, esta libre
-                        para el uso por parte de todo aquel que lo desee o lo
-                        necesite, desde aprendices hasta miembros activos. El
-                        Addon ha sido creado con ayuda de toda la comunidad
-                        Mozilla Hispano, as&iacute; que por lo general deberia
-                        funcionar y satisfacer a cada una de las comunidades
-                        locales que conforman Mozilla Hispano en cada pa&iacute;s.</p>
+                    <p class="first" style="text-align: justify">El Centro
+                    de Mozilla Hispano, es una Addon creado con el fin de
+                    facilitar el acceso a distintas herramientas o
+                    informaci&oacute;n que en las diferentes areas y secciones de
+                    la comunidad es necesario un facil acceso. El uso de
+                    este Addon no es limitado a cierto personal, esta libre
+                    para el uso por parte de todo aquel que lo desee o lo
+                    necesite, desde aprendices hasta miembros activos. El
+                    Addon ha sido creado con ayuda de toda la comunidad
+                    Mozilla Hispano, as&iacute; que por lo general deberia
+                    funcionar y satisfacer a cada una de las comunidades
+                    locales que conforman Mozilla Hispano en cada pa&iacute;s.</p>
 
-                        <p style="text-align: justify">El uso de este Addon es
-                        gratuito y est&aacute; sujeto a la licencia <a href=
-                        "http://mozilla.org/MPL/2.0/" target="_blank">Mozilla
-                        Public License, v. 2.0</a>. El manejo del codigo es
-                        open source, puedes obtener una copia desde el
-                        repositorio de <a href=
-                        "https://github.com/brianking/ReMo-Helper" target=
-                        "_blank">Github</a>. Algunos iconos usados en este
-                        Addon son tomados de <a href=
-                        "http://fortawesome.github.com/Font-Awesome" target=
-                        "_blank">Font Awesome</a> y <a href=
-                        "http://www.yootheme.com/icons/downloads" target=
-                        "_blank">YOOtheme</a>. El nombre y logo de Mozilla
-                        Hispano son marcas de la comunidad Mozilla Hispano,
-                        puede leer los terminos y condiciones de uso <a href=
-                        "http://foundation.zurb.com/" target="_blank">aqu&iacute;</a>.
-                        Parte de este Addon utiliza <a href=
-                        "http://foundation.zurb.com/" target=
-                        "_blank">Foundation</a>, Esta bajo los terminos de la
-                        licencia <a href="http://foundation.zurb.com/" target=
-                        "_blank">MIT</a>.</p>
+                    <p style="text-align: justify">El uso de este Addon es
+                    gratuito y est&aacute; sujeto a la licencia <a href=
+                    "http://mozilla.org/MPL/2.0/" target="_blank">Mozilla
+                    Public License, v. 2.0</a>. El manejo del codigo es
+                    open source, puedes obtener una copia desde el
+                    repositorio de <a href=
+                    "https://github.com/brianking/ReMo-Helper" target=
+                    "_blank">Github</a>. Algunos iconos usados en este
+                    Addon son tomados de <a href=
+                    "http://fortawesome.github.com/Font-Awesome" target=
+                    "_blank">Font Awesome</a> y <a href=
+                    "http://www.yootheme.com/icons/downloads" target=
+                    "_blank">YOOtheme</a>. El nombre y logo de Mozilla
+                    Hispano son marcas de la comunidad Mozilla Hispano,
+                    puede leer los terminos y condiciones de uso <a href=
+                    "http://foundation.zurb.com/" target="_blank">aqu&iacute;</a>.
+                    Parte de este Addon utiliza <a href=
+                    "http://foundation.zurb.com/" target=
+                    "_blank">Foundation</a>, Esta bajo los terminos de la
+                    licencia <a href="http://foundation.zurb.com/" target=
+                    "_blank">MIT</a>.</p> También se utiliza 
+                    <a href="http://richhollis.github.io/vticker/" target="_blank">vTicker</a> 
+                    bajo las licencias <a href="http://richhollis.github.io/vticker/license/">
+                    MIT y BSD</a>, y <a href="http://www.zazar.net/developers/jquery/zrssfeed/" 
+                    target="_blank">zRSSFeed</a>.
 
-                        <p style="text-align: justify">Este Addon fue creado
-                        gracias a la comunidad Mozilla Hispano y dem&aacute;s personas
-                        de las distintas comunidades locales, aqu&iacute; el listado
-                        del personal que hizo posible esto:</p>
 
-                        <p><i class="icon-user"></i><a href=
-                        "https://www.mozilla-hispano.org/documentacion/Usuario:Willyaranda"
-                        target="_blank">Willyaranda</a> : <i class="icon-star"></i> Idea</p>
+                    <p style="text-align: justify">Este Addon fue creado
+                    gracias a la comunidad Mozilla Hispano y dem&aacute;s personas
+                    de las distintas comunidades locales, aqu&iacute; el listado
+                    del personal que hizo posible esto:</p>
 
-                        <p><i class="icon-user"></i><a href=
-                        "https://www.mozilla-hispano.org/documentacion/Usuario:Gioyik"
-                        target="_blank">Gioyik</a> : <i class="icon-signal"></i> Desarrollo Principal</p>
-					</p>
-				</div>
-		</section>		
+                    <p><i class="icon-user"></i><a href=
+                    "https://www.mozilla-hispano.org/documentacion/Usuario:Willyaranda"
+                    target="_blank">Willyaranda</a> : <i class="icon-star"></i> Idea</p>
+
+                    <p><i class="icon-user"></i><a href=
+                    "https://www.mozilla-hispano.org/documentacion/Usuario:Gioyik"
+                    target="_blank">Gioyik</a> : <i class="icon-signal"></i> Desarrollo Principal</p>
+				</p>
+			</div>
+		</section>
 	</div>	
 </div>
 
